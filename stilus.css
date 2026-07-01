@@ -6,9 +6,9 @@
 }
 
 
-
 header {
-grid-area: h
+grid-area: h;
+background-image: url("img/dandelion.jpg");
 }
 footer{
 grid-area: f

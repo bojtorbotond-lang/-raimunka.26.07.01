@@ -1,33 +1,83 @@
-
 *{
-    box-sizing: border-box;
-    padding: 0px;
-    margin: 0px;
+    height: 300px;
+    width: auto;
+    border-radius: 10px;
+    background-size: cover;
+    color: white;
+    padding: 15px;
+}
+article, aside, footer, header, nav{
+    opacity: 0.8;
+}
+article:hover{
+    opacity: 1;
+}
+aside:hover{
+    opacity: 1;
+}
+footer:hover{
+    opacity: 1;
+}
+header:hover{
+    opacity: 1;
+}
+nav:hover{
+    opacity: 1;
+}
+body{
+    display: grid;
+    grid-template-areas:
+    'h n n'
+    'as f ar';
+    gap: 5px;
+
+}
+header, article, aside, footer{
+    text-align: right;
 }
 
-
-header {
-grid-area: h;
-background-image: url("img/dandelion.jpg");
-}
-footer{
-grid-area: f
-};
-article{
-grid-area: ar;
-}
-aside{
-grid-area: as;
+header{
+    background-image: url("img/dandelion.jpg");
+    grid-area: h;
 }
 nav{
-grid-area: n;
+    background-image: url("img/dand2.jpg");
+    grid-area: n;
 }
-
-main
-{display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-grid-template-areas: 
-'h n n'
-'as f ar'
-
+aside{
+    background-image: url("img/dand3.jpg");
+    grid-area: as;
+}
+footer{
+    background-image: url("img/dandy.gif");
+    grid-area: f;
+}
+article{
+    background-image: url("img/dandy2.gif");
+    grid-area: ar;
+}
+#kek{
+    background-color: rgba(77, 77, 121, 0.342);
+    height: 20px;
+}
+a{
+    text-decoration: none;
+}
+@media only screen and (max-width: 400px) {
+    body{
+        display: grid;
+        grid-template-areas:
+        'h'
+        'n'
+        'as'
+        'f'
+        'ar';
+    }
+    #kek{
+        height: 300px;
+    }
+    #kek a{
+        display: block;
+        height: 20px;
+    }
 }
